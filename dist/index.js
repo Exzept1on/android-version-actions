@@ -34483,6 +34483,11 @@ try {
 
     fs.readFile(gradlePath, 'utf8', function (err, data) {
         newGradle = data;
+
+        console.log(`err var : ${err}`);
+        console.log(`data var : ${data}`);
+        console.log(`newGradle var : ${newGradle}`);
+        
         if (versionCode.length > 0)
             newGradle = newGradle.replace(versionCodeRegexPattern, `$1${versionCode}`);
         if (versionName.length > 0)
